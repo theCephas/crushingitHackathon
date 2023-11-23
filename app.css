@@ -418,6 +418,9 @@ main {
   margin-left: 20px;
   margin-top: -1px;
 }
+.guide1, .guide2, .guide3, .guide4, .guide5{
+  margin-bottom: 8px;
+}
 .steps > p {
   padding-top: 2px;
   color: #303030;
