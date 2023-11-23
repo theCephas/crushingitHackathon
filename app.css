@@ -43,7 +43,7 @@ nav {
   justify-content: center;
 }
 .davii {
-  background-color: #303030;
+  background: #303030;
   color: #e3e3e3;
   font-size: 12px;
   line-height: 130%;
@@ -62,8 +62,11 @@ nav {
   justify-content: space-between;
   column-gap: 8px;
 }
-.not-and-davii > button {
+.notifi{
   background-color: #000;
+  border: 0;
+}
+.not-and-davii > button {
   border: 0;
   border-radius: 8px;
   box-shadow: none;
@@ -77,7 +80,6 @@ button:focus {
   background-color: #303030;
   border-radius: 8px;
   padding: 5px;
-  height: 32px;
   cursor: pointer;
 }
 .notification:hover {
@@ -109,7 +111,7 @@ input {
   height: 32px;
   z-index: 2;
 }
-input:hover {
+.inputBox:hover {
   border: 1px solid #e1e1e1;
 }
 .search-bar {
@@ -307,7 +309,7 @@ main {
   width: 800px;
   position: relative;
   margin: auto;
-  padding: 12px 8px 12px 16px;
+  padding: 16px 8px 16px 16px;
   border-radius: 8px;
 }
 
@@ -413,7 +415,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: -1px;
 }
 .steps > p {
@@ -428,10 +430,13 @@ main {
   border-radius: 10px;
   cursor: pointer;
   display: flex;
-  padding: 8px 8px 12px 5px;
+  padding: 10px;
 }
 .step.color {
   background: #f3f3f3;
+}
+.step-deets p {
+  font-size: 13px;
 }
 .progress {
   width: 70px;
@@ -481,7 +486,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} 
 .bullets input + span > svg{
   opacity: 0;
 }
@@ -668,13 +673,15 @@ main {
   }
   .select-plan > .plan-ad a {
     margin-top: 10px;
-
     right: 0;
     top: 0;
     position: relative;
   }
   .step-deets > img {
     display: none;
+  }
+  .step-deets>div{
+    width: auto;
   }
 }
 

@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ? "none"
         : "none";
     notification.style.backgroundColor =
-      notification.style.backgroundColor === "#303030" ||
+      notification.style.backgroundColor === "#3030" ||
       notification.style.backgroundColor === ""
         ? "#656266"
         : "";
