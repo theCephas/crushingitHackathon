@@ -24,6 +24,11 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.logo {
+  background-color: #000;
+  border: 0;
+  cursor: pointer;
+}
 .dc {
   background-color: #36fba1;
   padding: 8px;
@@ -57,6 +62,17 @@ nav {
   justify-content: space-between;
   column-gap: 8px;
 }
+.not-and-davii > button {
+  background-color: #000;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: none;
+}
+button:focus {
+  border: 2px solid #005bd3;
+  border-radius: 5px;
+  cursor: pointer;
+}
 .notification {
   background-color: #303030;
   border-radius: 8px;
@@ -74,6 +90,9 @@ nav {
 form {
   position: relative;
 }
+.visually-hidden {
+  display: none;
+}
 input {
   border: 1px solid #616161;
   border-color: #616161;
@@ -88,6 +107,7 @@ input {
   padding-left: 30px;
   width: 480px;
   height: 32px;
+  z-index: 2;
 }
 input:hover {
   border: 1px solid #e1e1e1;
@@ -98,6 +118,8 @@ input:hover {
   left: 10px;
   cursor: pointer;
   z-index: 1;
+  background-color: #303030;
+  border: 0;
 }
 
 main {
@@ -132,6 +154,13 @@ main {
   position: absolute;
   right: 16px;
 }
+.alerts-act {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  padding-top: 2px;
+  padding-bottom: 0px;
+}
 .alert .alert-word {
   background-color: #f1f1f1;
   padding: 16px;
@@ -141,13 +170,7 @@ main {
   gap: 8px;
   text-align: center;
 }
-.check-icon {
-  cursor: pointer;
-}
-.check-icon:focus {
-  border: 1px solid #005bd3;
-  border-radius: 8px;
-}
+
 /* Collections */
 
 .coll {
@@ -183,35 +206,56 @@ main {
   text-decoration: none;
   color: #303030;
 }
-.stores:hover,
-.options > a:hover,
-.last-col > a:hover {
+
+.stores-btn:hover,
+.options-btn:hover {
   background-color: #f0f0f0;
   border-radius: 5.25px;
   cursor: pointer;
 }
-.stores {
+.stores-btn {
   display: flex;
   line-height: 140%;
-  margin: 3px;
-  padding: 6px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  text-decoration: none;
+  width: 100%;
+  border: 0;
   color: #303030;
+  background-color: #fff;
+  cursor: pointer;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 2px;
+}
+.stores {
+  margin: 6px;
+  text-decoration: none;
+  display: flex;
+  cursor: pointer;
 }
 .options > a {
   text-decoration: none;
   color: #303030;
-  margin: 5px;
-  padding: 6px;
+  padding: 4px 5px;
+  display: flex;
+  width: 100%;
+}
+.options {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+.options-btn {
+  border: 0;
+  padding: 3px 6px;
+  width: 100%;
+  text-align: left;
   padding-top: 8px;
   padding-bottom: 8px;
-  display: flex;
+  background-color: #fff;
 }
 .check {
   position: absolute;
   right: 16px;
+  border: 0;
+  cursor: pointer;
 }
 .d-col {
   display: flex;
@@ -223,6 +267,7 @@ main {
   height: 40px;
   align-items: center;
 }
+
 .d-col .name {
   display: flex;
 }
@@ -230,21 +275,12 @@ main {
   padding-top: 8px;
   padding-left: 8px;
 }
-.options {
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
-  padding: 0px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
 
 .last-col > a {
   text-decoration: none;
   color: #303030;
   display: flex;
-  padding-top: 12px;
-  padding: 6px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
 }
 .last-col > .user:last-child {
   font-size: 12px;
@@ -255,7 +291,7 @@ main {
   font-size: 13px;
   font-weight: 500;
   color: #303030;
-  padding: 6px;
+  padding: 5px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -283,25 +319,31 @@ main {
   margin-right: 20px;
   position: relative;
 }
-.select-plan > .plan-ad > a {
-  text-decoration: none;
-  color: #323232;
-  background-color: #fff;
-  padding: 6px 12px;
-  border-radius: 6px;
+.plan-ad > a {
   right: -350px;
   top: -5.5px;
   position: absolute;
+  text-decoration: none;
+  color: #323232;
+}
+.plan-btn {
+  z-index: 2;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px -1px 0px 0px #b5b5b5 inset;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
 }
-.select-plan > .plan-ad > a:hover {
-  background-color: #dbdbdb;
+.plan-btn:hover {
+  background-color: #f3f3f3;
 }
 .cancel {
   position: absolute;
   right: 16px;
   cursor: pointer;
+  background: #1a1a1a;
+  border: 0;
 }
 .entry {
   display: block;
@@ -323,7 +365,7 @@ main {
 }
 .guidelines > p {
   font-size: 13px;
-  padding: 0px 8px 0px 8px;
+  padding: 4px 8px 3px 8px;
   font-weight: 400;
   color: #303030;
 }
@@ -343,9 +385,13 @@ main {
   display: flex;
   gap: 8px;
   align-items: center;
-  padding: 10px 8px 0px 8px;
+  padding: 10px 8px 10px 8px;
 }
-
+.guide-btn{
+  border: 0px;
+  background-color: #fff;
+  padding-bottom: 5px;
+}
 .guidelines .preamble > .guide-btn:hover {
   background-color: #f1f1f1;
   cursor: pointer;
@@ -360,14 +406,14 @@ main {
 }
 .guides {
   margin-top: 15px;
-  display: none;
   transition: opacity 1s ease;
+  display: none;
 }
 .steps {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-left: 6px;
+  margin-left: 10px;
   margin-top: -1px;
 }
 .steps > p {
@@ -382,24 +428,21 @@ main {
   border-radius: 10px;
   cursor: pointer;
   display: flex;
-  /* flex-direction: column; */
-  
   padding: 8px 8px 12px 5px;
 }
 .step.color {
   background: #f3f3f3;
-  /* padding-left: 8px; */
 }
-.progress{
+.progress {
   width: 70px;
   height: 4px;
-  background-color: #E3E3E3;
+  background-color: #e3e3e3;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
   margin-top: 3px;
 }
-.progress__fill{
+.progress__fill {
   height: 100%;
   width: 0;
   background-color: #1a1a1a;
@@ -408,21 +451,98 @@ main {
 .bullets {
   display: flex;
   align-items: center;
-  border: 2px dashed #8a8a8a;
-  border-radius: 50%;
   z-index: 1;
   height: 20px;
   width: 20px;
-}
-
-.bullets:hover {
-  border: 2px solid #8a8a8a;
-  cursor: pointer;
-}
-.bullets.done {
-  opacity: 1;
+  /* background: #8a8a8a; */
+} 
+.bullets.done{
   background-color: #000;
-  border: 2px solid black;
+}
+.bullets label{
+  position: relative;
+  width: 100%;
+  max-width: 24px;
+  height: 24px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+.bullets label:focus{
+  outline: none;
+  border: none;
+}
+.bullets input{
+  display: block;
+  position: fixed;
+  right: -10000000000vw;
+}
+.bullets input + span > svg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bullets input + span > svg{
+  opacity: 0;
+}
+.bullets input + span > svg:nth-of-type(1){
+  animation-name: checkSvgAnimation;
+  animation-duration: 70ms;
+  animation-timing-function: linear;
+  opacity: 1;
+}
+.bullets input + span:hover > svg:nth-of-type(2){
+  opacity: 1;
+}
+.bullets input:focus > span > svg:nth-of-type(5){
+  opacity: 1;
+}
+.bullets input:checked + span > svg{
+  animation-name: checkSvgAnimation;
+  animation-duration: 100ms;
+  animation-fill-mode: both;
+}
+.bullets input:checked + span > svg:nth-of-type(1){
+  opacity: 0;
+}
+.bullets input:checked + span > svg:nth-of-type(2){
+  animation-delay: 50ms;
+}
+.bullets input:checked + span > svg:nth-of-type(3){
+  animation-delay: 150ms;
+}
+.bullets input:checked + span > svg:nth-of-type(4){
+  animation-delay: 230ms;
+}
+.bullets input:checked + span > svg:nth-of-type(5){
+  animation-delay: 300ms;
+}
+.bullets input:checked + span > svg:nth-of-type(6){
+  animation-delay: 380ms;
+}
+.bullets input:checked + span > svg:nth-of-type(7){
+  animation-delay: 450ms;
+}
+.bullets input:checked + span > svg:nth-of-type(8){
+  animation-delay: 520ms;
+}
+.bullets input:checked + span > svg:nth-of-type(9){
+  animation-delay: 600ms;
+}
+.bullets input:checked + span > svg:nth-of-type(10){
+  animation-delay: 700ms;
+  opacity: 1;
+}
+@keyframes checkSvgAnimation {
+   0% {
+    opacity: 0;
+   } 
+   50% {
+    opacity: 1;
+   } 
+   100%{
+    opacity: 1;
+   } 
 }
 .deets-reveal {
   display: none;
@@ -488,15 +608,22 @@ main {
   align-items: center;
   gap: 20px;
 }
-.prod-opt > p {
+.prod-opt > .prod-opt-btn {
   margin-top: 20px;
   cursor: pointer;
   color: #323232;
+  background-color: #f3f3f3;
+  border: 0px none;
+  box-shadow: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 600;
+  font-size: 12px;
 }
-.prod-opt > p:hover {
+.prod-opt > .prod-opt-btn:hover {
   background-color: #e7e7e7;
-  padding: 5px;
   border-radius: 8px;
+  transition-duration: 1s;
 }
 @media screen and (max-width: 768px) {
   header .mobileLogo {
@@ -514,6 +641,7 @@ main {
   header .davii {
     padding-left: 0;
   }
+
   .dc {
     margin-left: 0;
   }
@@ -528,6 +656,10 @@ main {
   }
   .alert {
     width: 358px;
+    right: 0px;
+  }
+  .collections {
+    right: 0px;
   }
   .select-plan,
   .guidelines {

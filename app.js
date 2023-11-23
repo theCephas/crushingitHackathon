@@ -18,12 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
   let level = document.querySelector(".level");
   let count = 0;
   const progressBar = document.querySelector(".progress__fill");
-  let progress = 0;
+  
 
   check.forEach((mark) => {
-    mark.addEventListener("click", () => {
-      mark.classList.toggle("done");
-      count = mark.classList.contains("done") ? count + 1 : count - 1;
+    mark.addEventListener("click", (event) => {
+      if (event.target.tagName === 'INPUT') {
+        const isChecked = event.target.checked;
+        
+        if (isChecked) {
+          count = count + 1;
+        } else {
+          count = count - 1;
+        }
+      }
       level.innerHTML = count;
       const completedWidth = (count / check.length) * 100;
       progressBar.style.width = `${completedWidth}%`;
@@ -82,13 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
         : "";
   });
 
-  seen.addEventListener("click", () => {
-    seen.style.border =
-      seen.style.border === "" || seen.style.border === ""
-        ? "1px solid #005BD3"
-        : "";
-    seen.style.borderRadius = "8px";
-  });
 
   notification.addEventListener("click", () => {
     alert.style.display =
