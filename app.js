@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const daviBtn = document.querySelector(".davii");
   const cancel = document.querySelector(".cancel");
   const plans = document.querySelector(".entry");
-  let closedBtn = document.querySelector(".fa-chevron-down");
+  let closedBtn = document.querySelector(".fa-chevron-up");
   let guidesDisplay = document.querySelector(".guides");
   const steps = document.querySelectorAll(".steps");
   const bgColor = document.querySelectorAll(".step");
@@ -18,13 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
   let level = document.querySelector(".level");
   let count = 0;
   const progressBar = document.querySelector(".progress__fill");
-  
 
+  reveals[0].classList.add("active");
+  bgColor[0].classList.add("color");
   check.forEach((mark) => {
     mark.addEventListener("click", (event) => {
-      if (event.target.tagName === 'INPUT') {
+      if (event.target.tagName === "INPUT") {
         const isChecked = event.target.checked;
-        
+
         if (isChecked) {
           count = count + 1;
         } else {
@@ -51,12 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   closedBtn.addEventListener("click", () => {
-    if (closedBtn.classList.contains("fa-chevron-down")) {
-      closedBtn.classList.replace("fa-chevron-down", "fa-chevron-up");
-      guidesDisplay.style.display = "block";
-    } else {
+    if (closedBtn.classList.contains("fa-chevron-up")) {
       closedBtn.classList.replace("fa-chevron-up", "fa-chevron-down");
       guidesDisplay.style.display = "none";
+    } else {
+      closedBtn.classList.replace("fa-chevron-down", "fa-chevron-up");
+      guidesDisplay.style.display = "block";
     }
   });
 
@@ -88,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ? ""
         : "";
   });
-
 
   notification.addEventListener("click", () => {
     alert.style.display =

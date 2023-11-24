@@ -16,7 +16,7 @@ body {
   background-color: #f1f1f1;
 }
 
-nav {
+.nav {
   background-color: #000;
   display: flex;
   gap: 6px;
@@ -62,7 +62,7 @@ nav {
   justify-content: space-between;
   column-gap: 8px;
 }
-.notifi{
+.notifi {
   background-color: #000;
   border: 0;
 }
@@ -389,7 +389,7 @@ main {
   align-items: center;
   padding: 10px 8px 10px 8px;
 }
-.guide-btn{
+.guide-btn {
   border: 0px;
   background-color: #fff;
   padding-bottom: 5px;
@@ -409,7 +409,7 @@ main {
 .guides {
   margin-top: 15px;
   transition: opacity 1s ease;
-  display: none;
+  display: block;
 }
 .steps {
   display: flex;
@@ -418,7 +418,11 @@ main {
   margin-left: 20px;
   margin-top: -1px;
 }
-.guide1, .guide2, .guide3, .guide4, .guide5{
+.guide1,
+.guide2,
+.guide3,
+.guide4,
+.guide5 {
   margin-bottom: 8px;
 }
 .steps > p {
@@ -464,11 +468,11 @@ main {
   height: 20px;
   width: 20px;
   /* background: #8a8a8a; */
-} 
-.bullets.done{
+}
+.bullets.done {
   background-color: #000;
 }
-.bullets label{
+.bullets label {
   position: relative;
   width: 100%;
   max-width: 24px;
@@ -476,82 +480,82 @@ main {
   cursor: pointer;
   flex-grow: 1;
 }
-.bullets label:focus{
+.bullets label:focus {
   outline: none;
   border: none;
 }
-.bullets input{
+.bullets input {
   display: block;
   position: fixed;
   right: -10000000000vw;
 }
-.bullets input + span > svg{
+.bullets input + span > svg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-} 
-.bullets input + span > svg{
+}
+.bullets input + span > svg {
   opacity: 0;
 }
-.bullets input + span > svg:nth-of-type(1){
+.bullets input + span > svg:nth-of-type(1) {
   animation-name: checkSvgAnimation;
   animation-duration: 70ms;
   animation-timing-function: linear;
   opacity: 1;
 }
-.bullets input + span:hover > svg:nth-of-type(2){
+.bullets input + span:hover > svg:nth-of-type(2) {
   opacity: 1;
 }
-.bullets input:focus > span > svg:nth-of-type(5){
+.bullets input:focus > span > svg:nth-of-type(5) {
   opacity: 1;
 }
-.bullets input:checked + span > svg{
+.bullets input:checked + span > svg {
   animation-name: checkSvgAnimation;
   animation-duration: 100ms;
   animation-fill-mode: both;
 }
-.bullets input:checked + span > svg:nth-of-type(1){
+.bullets input:checked + span > svg:nth-of-type(1) {
   opacity: 0;
 }
-.bullets input:checked + span > svg:nth-of-type(2){
+.bullets input:checked + span > svg:nth-of-type(2) {
   animation-delay: 50ms;
 }
-.bullets input:checked + span > svg:nth-of-type(3){
+.bullets input:checked + span > svg:nth-of-type(3) {
   animation-delay: 150ms;
 }
-.bullets input:checked + span > svg:nth-of-type(4){
+.bullets input:checked + span > svg:nth-of-type(4) {
   animation-delay: 230ms;
 }
-.bullets input:checked + span > svg:nth-of-type(5){
+.bullets input:checked + span > svg:nth-of-type(5) {
   animation-delay: 300ms;
 }
-.bullets input:checked + span > svg:nth-of-type(6){
+.bullets input:checked + span > svg:nth-of-type(6) {
   animation-delay: 380ms;
 }
-.bullets input:checked + span > svg:nth-of-type(7){
+.bullets input:checked + span > svg:nth-of-type(7) {
   animation-delay: 450ms;
 }
-.bullets input:checked + span > svg:nth-of-type(8){
+.bullets input:checked + span > svg:nth-of-type(8) {
   animation-delay: 520ms;
 }
-.bullets input:checked + span > svg:nth-of-type(9){
+.bullets input:checked + span > svg:nth-of-type(9) {
   animation-delay: 600ms;
 }
-.bullets input:checked + span > svg:nth-of-type(10){
+.bullets input:checked + span > svg:nth-of-type(10) {
   animation-delay: 700ms;
   opacity: 1;
 }
 @keyframes checkSvgAnimation {
-   0% {
+  0% {
     opacity: 0;
-   } 
-   50% {
+  }
+  50% {
     opacity: 1;
-   } 
-   100%{
+  }
+  100% {
     opacity: 1;
-   } 
+  }
 }
 .deets-reveal {
   display: none;
@@ -618,7 +622,7 @@ main {
   align-items: center;
   gap: 20px;
 }
-.prod-opt > .prod-opt-btn:focus{
+.prod-opt > .prod-opt-btn:focus {
   box-shadow: none;
   background-color: #f3f3f3;
   border-radius: 0px;
@@ -687,13 +691,13 @@ main {
     top: 0;
     position: relative;
   }
-  .step.color{
+  .step.color {
     padding-left: 15px;
-  } 
+  }
   .step-deets > img {
     display: none;
   }
-  .step-deets>div{
+  .step-deets > div {
     width: auto;
   }
 }
