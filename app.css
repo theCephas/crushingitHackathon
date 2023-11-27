@@ -111,7 +111,7 @@ input {
   height: 32px;
   z-index: 2;
 }
-.inputBox:hover {
+input:hover {
   border: 1px solid #e1e1e1;
 }
 .search-bar {
@@ -565,7 +565,7 @@ main {
 }
 .step-deets {
   display: flex;
-  gap: 16px;
+  gap: 50px;
   justify-content: space-between;
   margin-top: -30px;
 }

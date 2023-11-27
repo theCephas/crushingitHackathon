@@ -19,9 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
   let count = 0;
   const progressBar = document.querySelector(".progress__fill");
 
+  function toggleReveal(index) {
+    reveals.forEach((reveal) => reveal.classList.remove("active"));
+    reveals[index].classList.add("active");
+
+    bgColor.forEach((color) => color.classList.remove("color"));
+    bgColor[index].classList.add("color");
+  }
+
   reveals[0].classList.add("active");
   bgColor[0].classList.add("color");
-  check.forEach((mark) => {
+  check.forEach((mark, index) => {
     mark.addEventListener("click", (event) => {
       if (event.target.tagName === "INPUT") {
         const isChecked = event.target.checked;
@@ -30,6 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
           count = count + 1;
         } else {
           count = count - 1;
+        }
+
+        const nextIndex = index + 1;
+        if (nextIndex < reveals.length) {
+          toggleReveal(nextIndex);
         }
       }
       level.innerHTML = count;
@@ -90,6 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
         : "";
   });
 
+  notification.setAttribute("tabindex", "0"); // Make button focusable
+
   notification.addEventListener("click", () => {
     alert.style.display =
       alert.style.display === "none" || alert.style.display === ""
@@ -104,6 +119,11 @@ document.addEventListener("DOMContentLoaded", () => {
       notification.style.backgroundColor === "#3030" ||
       notification.style.backgroundColor === ""
         ? "#656266"
+        : "";
+    daviBtn.style.backgroundColor =
+      daviBtn.style.backgroundColor === "" ||
+      daviBtn.style.backgroundColor === ""
+        ? ""
         : "";
   });
 
